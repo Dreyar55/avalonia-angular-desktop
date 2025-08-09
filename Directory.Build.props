@@ -1,0 +1,18 @@
+﻿<Project>
+	<PropertyGroup>
+		<RepositoryDirectory>$(MSBuildThisFileDirectory)</RepositoryDirectory>
+		<OutputPath>$(RepositoryDirectory)binary\</OutputPath>
+	</PropertyGroup>
+
+	<Choose>
+		<When Condition="'$(Configuration)' == 'Debug'">
+			<PropertyGroup>
+				<DebugSymbols>true</DebugSymbols>
+				<DebugType>full</DebugType>
+				<Optimize>false</Optimize>
+				<DefineConstants>DEBUG;TRACE</DefineConstants>
+			</PropertyGroup>
+		</When>
+	</Choose>
+
+</Project>
